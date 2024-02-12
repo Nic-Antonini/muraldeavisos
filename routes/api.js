@@ -4,7 +4,7 @@ const posts = require('../model/posts');
 const router = express.Router();
 const cors = require('cors');
 const options = {
-    origin: 'http://localhost:2000'
+    origin: 'https://nic-antonini.github.io/muraldeavisos'
 }
 
 router.use(cors(options));
