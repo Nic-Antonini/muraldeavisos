@@ -3,8 +3,11 @@ const bodyParser = require('body-parser');
 const posts = require('../model/posts');
 const router = express.Router();
 const cors = require('cors');
+const options = {
+    origin: 'http://localhost:2000'
+}
 
-router.use(cors());
+router.use(cors(options));
 
 router.get('/all', (req, res) => {
     res.json(JSON.stringify(posts.getAll()));
