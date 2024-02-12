@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 function updatePosts(){
-   let promise = fetch("http://192.168.0.12:2000/api/all").then(res =>{
+   let promise = fetch("https://nic-antonini.github.io/muraldeavisos/api/all").then(res =>{
         return res.json()
     }).then(json=>{
         let postElements = "";
@@ -46,7 +46,7 @@ function newPost(){
                     body: JSON.stringify(post)
                     }
 
-    fetch("http://192.168.0.12:2000/api/new", options).then( res => {
+    fetch("https://nic-antonini.github.io/muraldeavisos/api/new", options).then( res => {
         updatePosts()
         let title = document.getElementById("title").value = "";
         let description = document.getElementById("desc").value = "";
